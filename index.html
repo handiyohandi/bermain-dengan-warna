@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bermain Dengan Warna</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: 'Roboto', 'Arial';
+    }
+
+
+    /* judul */
+    #judul {
+      display: flex;
+      justify-content: center;
+      column-gap: 10px;
+      align-items: center;
+    }
+
+  #judul h1 {
+      font-size: 48px;
+      color: white;
+      text-shadow: 2px 2px 2px rgba(0, 160, 40, .6),
+        -2px -2px 2px rgba(255, 187, 0, 0.689),
+        5px 5px 2px rgba(0, 0, 0, .6),
+        -5px -5px 2px rgba(0, 0, 0, .6);
+    }
+
+    #judul button {
+      border: none;
+      font-size: 10px;
+      padding: 5px;
+      border-radius: 2px;
+      background-color: rgb(195, 255, 120);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+    }
+
+    #judul .judul-goldenrod {
+      color: goldenrod;
+    }
+    /* akhir judul */
+
+
+    /* acak warna */
+    .tAcakWarna {
+      margin-top: 30px;
+      padding: 10px;
+      border: none;
+      background-color: rgb(30, 120, 255);
+      color: white;
+      font-size: 14px;
+      border-radius: 5px;
+    
+      cursor: pointer;
+    }
+    /* akhir acak warna */
+
+
+    /* slide warna */
+    #slideWarna {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 10px;
+      border: 1px solid rgb(150, 150, 150);
+      border-radius: 5px;
+      box-shadow: inset -2px -2px 2px rgba(0, 0, 0, .6);
+      width: 180px;
+      padding: 10px;
+      margin: 20px auto;
+    }
+
+    .div-kotak {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 10px;
+    }
+
+    .kotak {
+      width: 15px;
+      height: 15px;
+    }
+
+    #slideWarna input {
+      cursor: pointer;
+    }
+
+    .merah {background-color: red;}
+    .hijau {background-color: green;}
+    .biru {background-color: blue;}
+    /* akhir slide warna */
+
+
+    /* sentuh warna */
+    #sentuhWarna {
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgb(150, 150, 150);
+      border-radius: 5px;
+      box-shadow: inset -2px -2px 2px rgba(0, 0, 0, .6);
+      margin: 10px auto;
+    }
+    /* akhir sentuh warna */
+
+  </style>
+</head>
+
+<body>
+  <div id="judul">
+    <h1>Bermain Dengan Warna</h1>
+    <div><button class="tUbahWarna">Ubah Warna</button> </div>
+  </div>
+
+  <div id="acakWarna">
+    <button class="tAcakWarna">Acak Warna</button>
+  </div>
+
+  <div id="slideWarna">
+    <div class="div-kotak">
+      <div class="kotak merah"></div>
+      <input type="range" name="sMerah" min="0" max="255">
+    </div>
+    <div class="div-kotak">
+      <div class="kotak hijau"></div>
+      <input type="range" name="sHijau" min="0" max="255">
+    </div>
+    <div class="div-kotak">
+      <div class="kotak biru"></div>
+      <input type="range" name="sBiru" min="0" max="255">
+    </div>
+  </div>
+
+  <div id="sentuhWarna">
+    <p>Touch me!</p>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
